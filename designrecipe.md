@@ -1,27 +1,37 @@
 ## 1. Extract nouns from the user stories or specification
 
 ```
-As a coach
-So I can get to know all students
-I want to see a list of students' names.
+As a blogger
+So I can write interesting stuff
+I want to write posts having a title.
+User > Post > Title
 
-As a coach
-So I can get to know all students
-I want to see a list of cohorts' names.
+As a blogger
+So I can write interesting stuff
+I want to write posts having a content.
+User > Post > Content
 
-As a coach
-So I can get to know all students
-I want to see a list of cohorts' starting dates.
+As a blogger
+So I can let people comment on interesting stuff
+I want to allow comments on my posts.
+Others > Comment
 
-As a coach
-So I can get to know all students
-I want to see a list of students' cohorts.
+As a blogger
+So I can let people comment on interesting stuff
+I want the comments to have a content.
+Others > Comment > Content
+
+As a blogger
+So I can let people comment on interesting stuff
+I want the author to include their name in comments.
+Others > Comment > Name
+
 ```
 
 ```
 Nouns:
 
-students, full_name, cohort_id, cohort_name, start_date
+Post, Title, Content, Comment, Content, Name
 ```
 
 ## 2. Infer the Table Name and Columns
@@ -30,17 +40,17 @@ Put the different nouns in this table. Replace the example with your own nouns.
 
 | Record                  | Properties                 |
 | ---------------------   | ------------------         |
-| cohorts                 | cohort_name, starting_date |
-| students                | full_name, cohort_id       |
+| Posts                   | title, content             |
+| Comments                | content, user_name         |
 
 
-1. Name of the first table (always plural): `cohorts` 
+1. Name of the first table (always plural): `posts` 
 
-    Column names: `cohort_name`, `starting_date`
+    Column names: `title`, `content`
 
-2. Name of the second table (always plural): `students` 
+2. Name of the second table (always plural): `comments` 
 
-    Column names: `full_name`, `cohort_id`
+    Column names: `content`, `user_name`
 
 ## 3. Decide the column types
 ```
