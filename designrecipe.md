@@ -98,15 +98,14 @@ Replace the relevant bits in this example with your own:
 CREATE TABLE posts (
   id SERIAL PRIMARY KEY,
   title VARCHAR(250),
-  content VARCHAR(500) --NEED TO CHECK FOR UNLIMITED LENGTHS
+  content TEXT
 );
 
 -- Then the table with the foreign key second.
 CREATE TABLE comments (
   id SERIAL PRIMARY KEY,
   user_name VARCHAR(250),
-  ucontent VARCHAR(500), --NEED TO CHECK FOR UNLIMITED LENGTHS
--- The foreign key name is always {other_table_singular}_id
+  content TEXT
   post_id int,
   constraint fk_post foreign key(post_id)
     references posts(id)
